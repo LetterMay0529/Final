@@ -10,7 +10,7 @@
 
                 @include('users._form')
                 <div class="form-group">
-                    <button class="btn btn-primary float-right">
+                    <button class="btn btn-secondary float-right">
                     &#x2714;Create
                     </button>
                 </div>

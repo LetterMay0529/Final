@@ -2,8 +2,11 @@
 
 @section('content')
 
+
+@include("info")
+
 <div class="float-right">
-    <a href="{{url('/users/create')}}" class="btn btn-primary">
+    <a href="{{url('/users/create')}}" class="btn btn-secondary">
     &#x2719;  Add New User
     </a>
 </div>
@@ -27,7 +30,8 @@
             <td>{{$u->lname}}</td>
             <td>{{$u->fname}}</td>
             <td>{{$u->email}}</td>
-            <td><a href="{{url('/users/edit', ['id'=>$u])}}" class="btn btn-info btn-sm" style="margin-left: 30%;">&#x270E;</a></td>
+            <td class="text-center"><a href="{{url('/users/edit', ['id'=>$u])}}" 
+            class="btn btn-outline-dark btn-sm">&#x270E;</a></td>
         </tr>
 
         @endforeach

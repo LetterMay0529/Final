@@ -1,17 +1,11 @@
 @extends('base')
 
 @section('content')
-@if($info = Session::get('info'))
 
-    <div class="card">
-        <div class="card-body bg-success text-white">
-            {{$info}}
-        </div>
-    </div>
+@include("info")
 
-@endif
     <div class="float-right">
-    <a href="{{url('/users/create')}}" class="btn btn-primary">
+    <a href="{{url('/instructors/create')}}" class="btn btn-secondary">
     &#x2719;  Add New Instructor
     </a>
     </div>
@@ -34,7 +28,7 @@
             <td>{{$i->user->lname}}</td>
             <td>{{$i->user->fname}}</td>
             <td>{{$i->aoe}}</td>
-            <td><a href="{{url('/instructors/edit', ['id'=>$i])}}" class="btn btn-info btn-sm"style="margin-left: 30%;">&#x270E;</a></td>
+            <td class="text-center"><a href="{{url('/instructors/edit', ['id'=>$i])}}" class="btn btn-outline-dark btn-sm">&#x270E;</a></td>
         </tr>
 
         @endforeach
