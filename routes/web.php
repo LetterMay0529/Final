@@ -35,7 +35,7 @@ Route::post('/learners','LearnerController@store');
 Route::get('/learners/{learner}', 'LearnerController@edit');
 Route::patch('learners/{learner}','LearnerController@update');
 Route::delete('/learners','LearnerController@delete');
-Route::get('/learners/create', 'LearnerController@create');
+Route::get('/learners/{learner}', 'LearnerController@create');
 
 Route::get('/courses', 'CourseController@index');
 Route::post('/courses', 'UserController@store');
